@@ -1,13 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Ticketing</title>
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/08635a04a3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisy UI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              titleColor: "rgb(3, 7, 18)",
+              desColor: "rgba(3, 7, 18, 0.6)",
+              primary: "rgb(29, 209, 0)",
+              secondary: "rgba(29, 209, 0, 0.4)",
+              thirdly: "rgba(29, 209, 0, 0.1)",
+              bannerDesc: "rgb(255, 255, 255)",
+              offerCard1: "rgb(255, 191, 15)",
+              offerCard2: "rgb(247, 140, 156)",
+              challengePartBg: "rgb(247, 248, 248)",
+            },
+            fontFamily: {
+              raleway: "Raleway",
+              inter: "Inter",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <header></header>
-    <main></main>
+  <body class="w-3/5 mx-auto font-inter">
+    <header class="">
+      <!-- navbar  -->
+      <nav class="font-raleway">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div
+                tabindex="0"
+                role="button"
+                class="btn btn-ghost lg:hidden"
+              ></div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Item 1</a></li>
+              </ul>
+            </div>
+            <h1 class="text-4xl font-bold text-titleColor">P-Ticket</h1>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li class="text-lg font-semibold text-desColor"><a>Home</a></li>
+              <li class="text-lg font-semibold text-desColor"><a>About</a></li>
+              <li class="text-lg font-semibold text-desColor">
+                <a>Destination</a>
+              </li>
+              <li class="text-lg font-semibold text-desColor"><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="btn text-xl font-semibold text-primary flex justify-center items-center bg-thirdly border border-secondary"
+              ><span>Bus</span>
+              <span><i class="fa-solid fa-van-shuttle w-6 h-5"></i></span>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- hero container  -->
+      <div class="">
+        <div
+          class="hero rounded-[32px] mt-5"
+          style="background-image: url(./images/banner.png)"
+        >
+          <div
+            class="hero-content text-neutral-content text-center pt-16 pb-32 px-20"
+          >
+            <div class="">
+              <h1
+                class="mb-4 text-6xl font-extrabold leading-[86px] font-raleway"
+              >
+                End-to-End Travel with
+                <span class="text-primary">P Paribahan</span>
+              </h1>
+              <p class="mb-8 w-3/4 mx-auto text-center text-bannerDesc text-lg">
+                Yes, you can run unit tests and view the results directly within
+                the app. The integrated testing features allow for a streamlined
+                .
+              </p>
+              <button class="btn bg-primary border-none text-xl">
+                <a href="" class="">Buy Tickets</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="mx-auto">
+      <!-- three card section  -->
+      <section class="flex justify-center items-center gap-6 -mt-16">
+        <!-- card1 -->
+        <div class="stats shadow border-b-2 border-b-primary p-8">
+          <div class="stat">
+            <div class="flex justify-center items-center gap-2">
+              <div class="avatar online">
+                <div class="w-16 h-16 rounded-full">
+                  <img class="w-full m-auto" src="./images/people.png" />
+                </div>
+              </div>
+              <div>
+                <div class="text-titleColor text-4xl font-bold items-center">
+                  500K+
+                </div>
+                <div class="text-desColor text-lg">Registered users</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="stats shadow border-b-2 border-b-primary p-8">
+          <div class="stat">
+            <div class="flex justify-center items-center gap-2">
+              <div class="avatar online">
+                <div class="w-16 h-16 rounded-full">
+                  <img class="w-full m-auto" src="./images/ticket-cupon.png" />
+                </div>
+              </div>
+              <div>
+                <div class="text-titleColor text-4xl font-bold items-center">
+                  1.7 lacks
+                </div>
+                <div class="text-desColor text-lg">Tickets sold</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="stats shadow border-b-2 border-b-primary p-8">
+          <div class="stat">
+            <div class="flex justify-center items-center gap-2">
+              <div class="avatar online">
+                <div class="w-16 h-16 rounded-full">
+                  <img class="w-full m-auto" src="./images/stoppage.png" />
+                </div>
+              </div>
+              <div>
+                <div class="text-titleColor text-4xl font-bold items-center">
+                  80K+
+                </div>
+                <div class="text-desColor text-lg">Rental partners</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- best offers for you related section-->
+      <section>
+        <h1
+          class="text-titleColor font-raleway text-4xl font-bold text-center mt-28 mb-12"
+        >
+          Best offers for you
+        </h1>
+        <div class="flex justify-center items-center gap-6">
+          <!-- card1 -->
+          <div
+            class="bg-offerCard1 flex justify-center items-center rounded-3xl"
+          >
+            <div class="p-12">
+              <h1 class="first-div-title text-3xl font-bold text-titleColor">
+                15% OFF
+              </h1>
+              <p class="text-titleColor font-medium">on your next purchase</p>
+              <p class="text-desColor">use by january 2024</p>
+            </div>
+            <div>
+              <img
+                src="./images/cupon-devider.png"
+                alt=""
+                class="first-div-img"
+              />
+            </div>
+            <div class="px-12 py-16">
+              <h1 class="first-div-title text-3xl font-bold text-titleColor">
+                NEW15
+              </h1>
+              <p class="text-desColor">Coupon code</p>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div
+            class="bg-offerCard2 flex justify-center items-center rounded-3xl"
+          >
+            <div class="p-12">
+              <h1 class="first-div-title text-3xl font-bold text-titleColor">
+                15% OFF
+              </h1>
+              <p class="text-titleColor font-medium">on your next purchase</p>
+              <p class="text-desColor">use by january 2024</p>
+            </div>
+            <div>
+              <img
+                src="./images/cupon-devider.png"
+                alt=""
+                class="first-div-img"
+              />
+            </div>
+            <div class="px-12 py-16">
+              <h1 class="first-div-title text-3xl font-bold text-titleColor">
+                NEW15
+              </h1>
+              <p class="text-desColor">Coupon code</p>
+            </div>
+          </div>
+        </div>
+        <!-- section button  -->
+      </section>
+      <!-- single button related section -->
+      <section>
+        <div class="text-center mt-14 mb-28">
+          <button class="border border-primary py-5 px-7 rounded-xl">
+            <a class="text-primary" href="">See All offers</a>
+          </button>
+        </div>
+      </section>
+    </main>
     <footer></footer>
     <script src="./js/script.js"></script>
   </body>
